@@ -46,21 +46,21 @@ public class EmpController {
 
     @PostMapping
     public Result save(@RequestBody Emp emp){
-        log.info("新增员工:",emp);
+        log.info("新增员工:{}",emp.toString());
         Integer re = empService.save(emp);
         return Result.success(re);
     }
 
     @GetMapping("/{id}")
     public Result getById(@PathVariable Integer id){
-        log.info("根据id查询员工{}",id);
+        log.info("根据id查询员工:{}",id);
         Emp re = empService.getById(id);
         return Result.success(re);
     }
 
     @PutMapping
     public Result update(@RequestBody Emp emp){
-        log.info("更新信息{}",emp.toString());
+        log.info("更新信息:{}",emp.toString());
         Integer re = empService.update(emp);
         return Result.success(re);
     }

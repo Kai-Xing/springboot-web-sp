@@ -42,7 +42,7 @@ public class UploadController {
     //阿里云OSS存储文件
     @PostMapping("/upload")
     public Result upload(MultipartFile image) throws IOException {
-        log.info("阿里云OSS文件上传{}", image.getOriginalFilename());
+        log.info("阿里云OSS文件上传:{}", image.getOriginalFilename());
         //阿里云OSS工具类
         String url = aliOSSUtils.upload(image);
         log.info("文件上传完成{}",url);
