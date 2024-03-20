@@ -8,7 +8,7 @@ import java.util.List;
 public interface DeptService {
 
     public List<Dept> list();
-    public Integer delete(Integer id);
-    public Integer insert(Dept dept);
-    public Integer update(Dept dept);
+    public void delete(Integer id) throws Exception;
+    public void insert(Dept dept);
+    public void update(Dept dept);
 }

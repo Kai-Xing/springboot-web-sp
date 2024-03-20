@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.it.springbootwebsp.mapper.EmpMapper">
     <update id="update">
-        update tb_emp
+        update emp
         <set>
             <if test="username != null and username != ''">
                 username = #{username},
@@ -39,7 +39,7 @@
     </update>
 
     <delete id="delete">
-        delete from tb_emp where id in
+        delete from emp where id in
         <foreach collection="ids" item="id" separator="," open="(" close=")">
             #{id}
         </foreach>
@@ -47,7 +47,7 @@
 
     <select id="list" resultType="com.it.springbootwebsp.pojo.Emp">
         select *
-        from tb_emp
+        from emp
         <where>
             <if test="name != null and name != ''">
                 name like concat('%', #{name}, '%')

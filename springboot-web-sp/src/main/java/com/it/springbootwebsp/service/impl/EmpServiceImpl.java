@@ -73,4 +73,8 @@ public class EmpServiceImpl implements EmpService {
     }
 
 
+    @Override
+    public Integer deleteByDeptId(Integer id){
+        return empMapper.deleteByDeptId(id);
+    }
 }

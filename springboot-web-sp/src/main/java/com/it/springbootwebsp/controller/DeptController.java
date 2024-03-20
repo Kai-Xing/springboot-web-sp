@@ -28,23 +28,23 @@ public class DeptController {
     }
 
     @DeleteMapping("/{id}")
-    public Result delete(@PathVariable Integer id){
+    public Result delete(@PathVariable Integer id) throws Exception {
         log.info("删除部门:{}",id);
-        Integer re = deptService.delete(id);
-        return Result.success(re);
+        deptService.delete(id);
+        return Result.success();
     }
 
     @PostMapping
     public Result insert(@RequestBody Dept dept){
         log.info("添加部门:{}",dept.toString());
-        Integer re = deptService.insert(dept);
-        return Result.success(re);
+        deptService.insert(dept);
+        return Result.success();
     }
 
     @PutMapping
     public Result update(@RequestBody Dept dept){
         log.info("修改部门信息:{}",dept.getId());
-        Integer re = deptService.update(dept);
-        return Result.success(re);
+        deptService.update(dept);
+        return Result.success();
     }
 }

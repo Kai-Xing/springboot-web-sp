@@ -22,4 +22,6 @@ public interface EmpService {
     Integer update(Emp emp);
 
     Emp login(Emp emp);
+
+    Integer deleteByDeptId(Integer id);
 }

@@ -20,3 +20,8 @@ aliyun.oss:
   accessKeyId: LTAI5tDEs4kEi5k1T4TRVcF7
   accessKeySecret: Hp4EzlaZQXMCKWSTOJbLerFByXVGMJ
   bucketName: web-it-xing
+
+#spring事务管理日志
+logging:
+  level:
+    org.springframework.jdbc.support.JdbcTransactionManager: debug
