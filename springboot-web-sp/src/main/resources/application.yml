@@ -1,9 +1,9 @@
 spring:
   datasource: #配置数据库连接信息
-    driver-class-name: com.mysql.cj.jdbc.Driver #驱动类名称
-    url: jdbc:mysql://localhost:3306/db04 #数据库连接的url
-    username: root #数据库用户名
-    password: xingmysql #数据库密码
+    driver-class-name: 
+    url: 
+    username: 
+    password: 
   servlet:
     multipart:
       max-file-size: 10MB #单个文件上传大小限制
@@ -16,10 +16,10 @@ mybatis:
 
 #阿里云OSS配置
 aliyun.oss:
-  endpoint: https://oss-cn-hangzhou.aliyuncs.com
-  accessKeyId: LTAI5tDEs4kEi5k1T4TRVcF7
-  accessKeySecret: Hp4EzlaZQXMCKWSTOJbLerFByXVGMJ
-  bucketName: web-it-xing
+  endpoint: 
+  accessKeyId: 
+  accessKeySecret: 
+  bucketName: 
 
 #spring事务管理日志
 logging:
