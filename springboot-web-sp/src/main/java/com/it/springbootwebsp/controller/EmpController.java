@@ -1,5 +1,6 @@
 package com.it.springbootwebsp.controller;
 
+import com.it.springbootwebsp.anno.Log;
 import com.it.springbootwebsp.pojo.Emp;
 import com.it.springbootwebsp.pojo.PageBean;
 import com.it.springbootwebsp.pojo.Result;
@@ -37,6 +38,7 @@ public class EmpController {
         return Result.success(pageBean);
     }
 
+    @Log
     @DeleteMapping("{ids}")
     public Result delete(@PathVariable List<Integer> ids){
         log.info("批量删除员工：{}",ids);
@@ -44,6 +46,7 @@ public class EmpController {
         return Result.success(re);
     }
 
+    @Log
     @PostMapping
     public Result save(@RequestBody Emp emp){
         log.info("新增员工:{}",emp.toString());
@@ -58,6 +61,7 @@ public class EmpController {
         return Result.success(re);
     }
 
+    @Log
     @PutMapping
     public Result update(@RequestBody Emp emp){
         log.info("更新信息:{}",emp.toString());

@@ -1,6 +1,7 @@
 package com.it.springbootwebsp.controller;
 
 
+import com.it.springbootwebsp.anno.Log;
 import com.it.springbootwebsp.pojo.Result;
 import com.it.springbootwebsp.utils.AliOSSUtils;
 import lombok.Value;
@@ -39,6 +40,7 @@ public class UploadController {
 //        return Result.success();
 //    }
 
+    @Log
     //阿里云OSS存储文件
     @PostMapping("/upload")
     public Result upload(MultipartFile image) throws IOException {

@@ -18,6 +18,6 @@ public class WebConfig implements WebMvcConfigurer {
          * TODO
          * 测试时关闭
          */
-        //registry.addInterceptor(loginCheckInterceptor).addPathPatterns("/**").excludePathPatterns("/login");
+        registry.addInterceptor(loginCheckInterceptor).addPathPatterns("/**").excludePathPatterns("/login");
     }
 }

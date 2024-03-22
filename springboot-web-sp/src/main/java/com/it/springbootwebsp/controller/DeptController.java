@@ -1,5 +1,6 @@
 package com.it.springbootwebsp.controller;
 
+import com.it.springbootwebsp.anno.Log;
 import com.it.springbootwebsp.pojo.Dept;
 import com.it.springbootwebsp.pojo.Result;
 import com.it.springbootwebsp.service.DeptService;
@@ -27,6 +28,7 @@ public class DeptController {
         return Result.success(deptList);
     }
 
+    @Log
     @DeleteMapping("/{id}")
     public Result delete(@PathVariable Integer id) throws Exception {
         log.info("删除部门:{}",id);
@@ -34,6 +36,7 @@ public class DeptController {
         return Result.success();
     }
 
+    @Log
     @PostMapping
     public Result insert(@RequestBody Dept dept){
         log.info("添加部门:{}",dept.toString());
@@ -41,6 +44,7 @@ public class DeptController {
         return Result.success();
     }
 
+    @Log
     @PutMapping
     public Result update(@RequestBody Dept dept){
         log.info("修改部门信息:{}",dept.getId());

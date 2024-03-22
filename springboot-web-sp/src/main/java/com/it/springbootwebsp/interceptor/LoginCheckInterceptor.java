@@ -59,11 +59,11 @@ public class LoginCheckInterceptor implements HandlerInterceptor {
 
     @Override //目标资源方法运行后
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
-        System.out.println("postHandle运行了");
+        //System.out.println("postHandle运行了");
     }
 
     @Override //视图渲染完毕后运行
     public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
-        System.out.println("afterCompletion运行了");
+        //System.out.println("afterCompletion运行了");
     }
 }
