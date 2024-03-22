@@ -50,10 +50,10 @@ public class EmpServiceImpl implements EmpService {
 
 
     @Override
-    public Integer save(Emp emp){
+    public Integer insert(Emp emp){
         emp.setCreateTime(LocalDateTime.now());
         emp.setUpdateTime(LocalDateTime.now());
-        return empMapper.save(emp);
+        return empMapper.insert(emp);
     }
 
     @Override

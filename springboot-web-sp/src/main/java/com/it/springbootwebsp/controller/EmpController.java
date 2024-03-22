@@ -48,9 +48,9 @@ public class EmpController {
 
     @Log
     @PostMapping
-    public Result save(@RequestBody Emp emp){
+    public Result insert(@RequestBody Emp emp){
         log.info("新增员工:{}",emp.toString());
-        Integer re = empService.save(emp);
+        Integer re = empService.insert(emp);
         return Result.success(re);
     }
 

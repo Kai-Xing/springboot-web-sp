@@ -15,7 +15,7 @@ public interface EmpService {
 
     Integer delete(List<Integer> ids);
 
-    Integer save(Emp emp);
+    Integer insert(Emp emp);
 
     Emp getById(Integer id);
 

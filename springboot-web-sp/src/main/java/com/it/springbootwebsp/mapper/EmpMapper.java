@@ -27,7 +27,7 @@ public interface EmpMapper {
     //新增员工
     @Insert("insert into emp(username, name, gender, job, dept_id, entrydate, create_time, update_time) " +
             "values (#{username}, #{name}, #{gender}, #{job}, #{deptId}, #{entrydate}, #{createTime}, #{updateTime})")
-    public Integer save(Emp emp);
+    public Integer insert(Emp emp);
 
     @Select("select * from emp where id = #{id}")
     Emp getById(Integer id);
